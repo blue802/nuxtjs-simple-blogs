@@ -71,6 +71,7 @@ export default {
     font-weight: 700;
     margin-bottom: 1.8rem;
     text-transform: capitalize;
+    @include line-clamp(2);
   }
 
   &__author {

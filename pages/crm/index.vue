@@ -29,16 +29,16 @@
           >
             <td class="py-4 px-6 border-b border-grey-light">{{ blog.id }}</td>
             <td class="py-4 px-6 border-b border-grey-light capitalize">
-              {{ blog.title }}
+              <p class="line-clamp">{{ blog.title }}</p>
             </td>
-            <td class="py-4 px-6 border-b border-grey-light">
+            <td class="flex py-4 px-6 border-b border-grey-light">
               <nuxt-link
                 :to="'/crm/' + blog.id"
                 class="inline-block text-white font-bold py-1 px-3 rounded text-xs bg-green-400 hover:bg-green-500"
                 >Edit</nuxt-link
               >
               <div
-                class="inline-block text-white font-bold py-1 px-3 rounded text-xs bg-red-400 hover:bg-red-500 cursor-pointer"
+                class="ml-1 inline-block text-white font-bold py-1 px-3 rounded text-xs bg-red-400 hover:bg-red-500 cursor-pointer"
                 @click="onRemove(blog.id)"
               >
                 Delete
@@ -74,3 +74,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.line-clamp {
+  @include line-clamp(1);
+}
+</style>
