@@ -20,7 +20,7 @@
       />
     </div>
     <div class="overflow-hidden">
-      <Nuxt keep-alive />
+      <Nuxt />
     </div>
   </div>
 </template>

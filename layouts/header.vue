@@ -6,7 +6,7 @@
     <nav class="nav">
       <div class="nav__links">
         <nuxt-link to="/" class="nav__link">Home</nuxt-link>
-        <nuxt-link to="/blogs" class="nav__link">Blogs</nuxt-link>
+        <nuxt-link to="/blogs?page=1" class="nav__link">Blogs</nuxt-link>
         <nuxt-link to="/about" class="nav__link">About</nuxt-link>
         <nuxt-link to="/contact" class="nav__link">Contact</nuxt-link>
         <nuxt-link to="/crm" class="nav__link">CRM</nuxt-link>

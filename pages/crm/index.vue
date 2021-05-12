@@ -1,6 +1,12 @@
 <template>
   <div class="container mx-auto xl:max-w-screen-xl">
     <div class="text-right">
+      <button
+        class="focus:outline-none inline-block bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded"
+        @click="$fetch"
+      >
+        Refresh
+      </button>
       <nuxt-link
         to="/crm/create"
         class="inline-block bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded"
@@ -21,7 +27,8 @@
             </th>
           </tr>
         </thead>
-        <tbody>
+        <b-spinner v-if="$fetchState.pending" type="grow" label="loading..." />
+        <tbody v-else>
           <tr
             v-for="blog in blogs"
             :key="blog.id"

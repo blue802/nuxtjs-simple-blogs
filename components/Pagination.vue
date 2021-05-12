@@ -43,16 +43,13 @@ export default {
   },
   computed: {
     prevPage() {
-      let link = '/blogs/page/'
+      let link = this.$route.path + '?page='
       link += this.currentPage > 1 ? this.currentPage - 1 : this.currentPage
       return link
     },
     nextPage() {
-      let link = '/blogs/page/'
-      link +=
-        this.currentPage < Math.ceil(this.totalRows / this.perPage)
-          ? this.currentPage + 1
-          : this.currentPage
+      let link = this.$route.path + '?page='
+      link += this.currentPage + 1
       return link
     },
   },
